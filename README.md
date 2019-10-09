@@ -10,7 +10,7 @@
 
 * Also supports loading of unsigned img4 images. Run "python rmsigchks.py" to remove signature checks.
 
-* Supports s5l8960x (iPhone 5s) and - new - t8011 (iPad Pro 2017).
+* Supports s5l8960x (iPhone 5s), t8011 (iPad Pro 2017), and - new - t8015 (iPhone 8 & iPhone X).
 
 * **IMPORTANT:** Other devices are currently **NOT SUPPORTED**.
 
