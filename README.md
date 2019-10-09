@@ -4,6 +4,15 @@
 
 **Read [disclaimer](#disclaimer) before using this software.*
 
+## About this fork
+
+* This fork allows you to load img4 images (e.g. iBSS/LLB) in pwned DFU mode.
+
+* Also supports loading of unsigned img4 images. Run "python rmsigchks.py" to remove signature checks.
+
+* Supports s5l8960x (iPhone 5s) and - new - t8011 (iPad Pro 2017).
+
+* **IMPORTANT:** Other devices are currently **NOT SUPPORTED**.
 
 ## checkm8
 
