@@ -39,9 +39,18 @@ def all_exploit_configs():
         0x10000f2d0: "\x00\x00\x80\xd2\xc0\x03\x5f\xd6"
     }
 
+    t8015_patches = {
+        0x100006868: "\x21\x00\x80\x52\xe1\xb7\x03\x39\xe1\xb3\x03\x39\xe1\xbb\x03\x39",
+        0x10000687c: "\x1f\x20\x03\xd5", # nop
+        0x100006880: "\x1f\x20\x03\xd5", # nop
+        0x100006884: "\x1f\x20\x03\xd5", # nop
+        0x10000d2e4: "\x00\x00\x80\xd2\xc0\x03\x5f\xd6"
+    }
+
     return [
         DeviceConfig("iBoot-1704.10", 0x8960, s5l8960x_patches),
         DeviceConfig("iBoot-3135.0.0.2.3", 0x8011, t8011_patches),
+        DeviceConfig("iBoot-3332.0.0.1.23", 0x8015, t8015_patches),
     ]
 
 def exploit_config(serial_number):
@@ -54,7 +63,7 @@ def exploit_config(serial_number):
             print "Make sure device is in SecureROM DFU Mode and not LLB/iBSS DFU Mode. Exiting."
             sys.exit(1)
     print "ERROR: This is not a compatible device. Exiting."
-    print "Right now, only the iPhone 5s is compatible."
+    print "Right now, only the iPhone A7, A10X, and A11 are compatible."
     sys.exit(1)
 
 def main():
